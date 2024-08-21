@@ -1,0 +1,40 @@
+{
+	"schemaVersion": 1,
+	"id": "auto-whitelist",
+	"version": "${version}",
+	"name": "Auto whitelist",
+	"description": "Changes whitelist depending on set time stamps",
+	"authors": [
+		"Duckyshmuckys"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/auto-whitelist/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"net.duckyshmuckys.autowhitelist.AutoWhitelist"
+		],
+		"fabric-datagen": [
+			"net.duckyshmuckys.autowhitelist.AutoWhitelistDataGenerator"
+		],
+		"client": [
+			"net.duckyshmuckys.autowhitelist.AutoWhitelistClient"
+		]
+	},
+	"mixins": [
+		"auto-whitelist.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.16.2",
+		"minecraft": "~1.21",
+		"java": ">=21",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
